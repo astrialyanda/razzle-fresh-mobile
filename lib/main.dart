@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:razzle_fresh_mobile/menu.dart';
+import 'package:razzle_fresh_mobile/screens/menu.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,6 +31,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme:
             ColorScheme.fromSeed(seedColor: Color.fromARGB(255, 99, 216, 136)),
+        scaffoldBackgroundColor: const Color.fromARGB(255, 255, 255, 255),
         useMaterial3: true,
       ),
       home: MyHomePage(),
