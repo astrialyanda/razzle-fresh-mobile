@@ -18,6 +18,26 @@ samples, guidance on mobile development, and a full API reference.
 </details>
 </br>
 
+# TUGAS 9
+
+## Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
+Ya, kita bisa melakukan pengambilan data JSON tanpa membuat model terlebih dahulu dengan menggunakan suatu variabel yang nantinya akan digunakan untuk menyimpan dictionary berisi data tersebut. Melakukan pengambilan data dengan metode ini tidak lebih baik daripada menggunakan model. Menggunakan model lebih baik karena dapat mempermudah dalam mengambil data.
+
+## Jelaskan fungsi dari CookieRequest dan jelaskan mengapa instance CookieRequest perlu untuk dibagikan ke semua komponen di aplikasi Flutter.
+CookieRequest adalah suatu class dari library pbp_django_auth.dart. CookieRequest berfungsi agar aplikasi dapat melacak status login, memberi informasi sesi login pengguna, serta request HTTP dengan metode GET dan POST. CookieRequest perlu dibagikan ke semu komponen di aplikasi Flutter agar status login serta informasi sesi login user terjaga.
+
+## Jelaskan mekanisme pengambilan data dari JSON hingga dapat ditampilkan pada Flutter.
+Terlebih dahulu menjalankan web app django untuk mengambil data JSON. Setelah mengambil data JSON dari proyek Django, gunakan website Quicktype untuk mentranslasikan JSON ke bahasa Dart. Lalu masukkan kode tersebut ke dalam file product.dart di dalam direktori models. Lalu tambahkan dependensi http `<uses-permission android:name="android.permission.INTERNET" />` pada android/app/src/main/AndroidManifest.xml agar aplikasi tersebut dapat mengakses internet.
+
+## Jelaskan mekanisme autentikasi dari input data akun pada Flutter ke Django hingga selesainya proses autentikasi oleh Django dan tampilnya menu pada Flutter.
+User diminta memasukkan data login yaitu username dan password pada halaman login. Setelah tombol login ditekan, CookieRequest akan terpanggil dan mengirimkan HTTP request.
+
+## Sebutkan seluruh widget yang kamu pakai pada tugas ini dan jelaskan fungsinya masing-masing.
+1. TextField : digunakan untuk memasukkan input teks
+2. FutureBuilder : mengelola status serta data secara asinkronus
+3. Column : mengatur elemen yang berdampingan secara vertikal
+4. ListView : menampilkan daftar widget.
+
 # TUGAS 8
 
 ## Perbedaan antara Navigator.push() dan Navigator.pushReplacement()
